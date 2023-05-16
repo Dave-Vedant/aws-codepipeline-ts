@@ -18,7 +18,6 @@ export class AwsCodepipelineTsStack extends cdk.Stack {
       })
     });
 
-/*
     const testingStage = pipeline.addStage(new MyPipelineAppStage(this, "test", {
       env: { account: "398081196462", region: "ca-central-1" }
     }));
@@ -26,7 +25,7 @@ export class AwsCodepipelineTsStack extends cdk.Stack {
 
     testingStage.addPre(new ShellStep("Run Unit Tests", { commands: ['npm install', 'npm test'] }));
     testingStage.addPost(new ManualApprovalStep('Manual approval before production'));
-*/
+    
     const prodStage = pipeline.addStage(new MyPipelineAppStage(this, "prod", {
       env: { account: "398081196462", region: "ca-central-1" }
     }));
