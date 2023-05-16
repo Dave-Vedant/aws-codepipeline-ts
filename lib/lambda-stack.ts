@@ -3,7 +3,7 @@ import { Construct } from 'constructs';
 import { Function, Runtime, Code, InlineCode } from 'aws-cdk-lib/aws-lambda';
 import * as path from "path";
 
-
+// (prepare --> deploy) in testing and prod environment
 export class LambdaStack extends cdk.Stack {
   constructor(scope: Construct, id: string, StageName: string, props?: cdk.StackProps) {
     super(scope, id, props);
